@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar Umanis</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ app.request.basePath }}app/views/css/bootstrap.css">
+    <link rel="stylesheet" href="{{ app.request.basePath }}app/views/css/admin.css">
+    <link rel="stylesheet" href="{{ app.request.basePath }}app/views/css/main.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper clearfix">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1>
+                        <img src="{{ app.request.basePath }}app/views//img/logo_umanis.png" alt="logo Umanis">
+                    </h1>
+                </div>
+                <div class="col-md-6">
+                    <nav>
+                        <ul>
+                            {% if statut == 0 %}
+                            <li><a href="{{ path_for('user') }}">Planning</a></li>
+                             <li> <a href="{{ path_for('userProfile') }}">Profil-User</a>  </li>
+                            {% endif %}
+                            {% if statut == 1 %}
+                                <li><a href="{{ path_for('tab') }}">Planning</a></li>
+                             <li> <a href="{{ path_for('admin') }}">Profil-Admin</a>  </li>
+                            {% endif %}
+                            <li><p>Bonjour, {{ user }}</p></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-connexion col-md-2">
+                    <a href="{{ path_for('deco') }}">Deconnexion</a>
+                </div>
+            </div>
+        </div>
+    </header>
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="{{ app.request.basePath }}app/views/js/bootstrap.js"></script>
+    <script type="text/javascript" src="{{ app.request.basePath }}app/views/js/animation.js"></script>
+    <script type="text/javascript" src="{{ app.request.basePath }}app/views/js/main.js"></script>
+    </body>
+</html>

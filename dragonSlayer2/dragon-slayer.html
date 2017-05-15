@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Dragon Slayer 2</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Indie+Flower">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/normalize-3.0.3.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.3.0.min.css">
+    <link rel="stylesheet" href="css/interface.css">
+    <link rel="stylesheet" href="css/dragon-slayer.css">
+
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/library/utilities.js"></script>
+    <script src="js/library/CanvasFX.class.js"></script>
+    <script src="js/library/Sprite.class.js"></script>
+
+
+    <script src="js/interface/Menu.class.js"></script>
+    <script src="js/interface/MessagePanel.class.js"></script>
+    <script src="js/interface/Map.class.js"></script>
+    <script src="js/interface/Entity.class.js"></script>
+    <script src="js/interface/StatusBar.class.js"></script>
+
+
+    <script src="js/game/Game.class.js"></script>
+    <script src="js/game/Player.class.js"></script>
+    <script src="js/game/Dragon.class.js"></script>
+    <script src="js/game/World.class.js"></script>
+
+    <script src="js/dragon-slayer-data.js"></script>
+<body>
+    <header>
+        <h1 class="animate-fire">
+            <a href="dragon-slayer.html" title="redemarrer le jeu">Dragon Slayer</a>
+        </h1>
+    </header>
+    <main class="hide">
+        <section class="interface-box interface-game">
+            <canvas id="interface-map" width="640" height="480"></canvas>
+            <table id="interface-status-bar" class="interface-status-bar">
+
+                <thead>
+                    <tr>
+                        <th class="disabled"></th>
+                        <th class="player"></th>
+                        <th class="disabled"></th>
+                        <th class="disabled"></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </section>
+        <aside id="interface-message-panel" class="interface-box interface-message-panel">
+            <ul>
+
+            </ul>
+        </aside>
+    </main>
+    <form id="interface-menu" class="interface-box interface-menu">
+        <fieldset>
+            <legend><i class="fa fa-gamepad"></i>  Menu de démarrage</legend>
+            <ul>
+                <li>
+                    <label for="agility">Pseudo: </label>
+                    <input type="text" id="nickName" name="nickName" maxlength="10"/>
+                </li>
+                <li>
+                    <label for="strength">Force: </label>
+                    <meter id="strength" min="0" value="10" max="15"></meter>
+                    <button class="meter-control" data-action="increase" data-meter="strength">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                    <button class="meter-control" data-action="decrease" data-meter="strength">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                </li>
+                <li>
+                    <label for="agility">Agilité: </label>
+                    <meter id="agility" min="0" value="10" max="15"></meter>
+                    <button class="meter-control" data-action="increase" data-meter="agility">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                    <button class="meter-control" data-action="decrease" data-meter="agility">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                </li>
+                <li>
+                    <p>
+                        Vous pouvez encore répartir <strong class="remaining-point"></strong> point(s)
+                    </p>
+                </li>
+                <li>
+                    <label for="difficulty-normal">Difficulté :</label>
+                    <input type="radio" id="difficulty-easy" name="difficulty" value="easy" checked/>
+                    <label for="difficulty-easy" class="radio">Baby</label>
+                    <input type="radio" id="difficulty-normal" name="difficulty" value="normal"/>
+                    <label for="difficulty-normal" class="radio">Slayer</label>
+                    <input type="radio" id="difficulty-hard" name="difficulty" value="hard"/>
+                    <label for="difficulty-hard" class="radio">Nightmare</label>
+                </li>
+                <li>
+                    <button class="start">Démarrer :-)</button>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    <script src="js/dragon-slayer.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+{% extends 'pages/tablayout.twig' %}
+{% block content %}
+    <main>
+        <div class="wrapper clearfix">
+            <h2>Monday</h2>
+            <div class="col-md-8">
+
+                <!-- Tableau de tâches  -->
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        {% for user in userdispo %}
+                        <th>{{ user['compte'] }}</th>
+                        {% endfor %}
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% set foo = 8 %}
+                    {% for test in 0..5 %}
+                    <tr class="tab-ligne1">
+                        <td>{{ foo }}h</td>
+                        {% for user in userTasks %}
+                            <td>ID : {{ user['idtask'] }} </br>
+                                Society name : {{ user['namesociety'] }}  </br>
+                                type : {{ user['priorityserv'] }}
+                            </td>
+                            {% set foo = foo + 1 %}
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4">
+
+                <!-- Tableau de tâches à assigner -->
+                <table class="tab-assign table-bordered">
+                    <thead id="tab-assign-head">
+
+                    <tr>
+                        <th colspan="5">Unplanned task</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="assign-second" class="tab-assign-second">
+                        <th>Priority</th>
+                        <th>Id task</th>
+                        <th>Task</th>
+                    </tr>
+                    {% for task in task %}
+                    <tr class="tab-assign-body">
+                        <td class="priority-prod">{{ task['prioritycolor'] }}</td>
+                        <td class="task-prod">{{ task['idtask'] }}</td>
+                        <td>{{ task['priorityserv'] }}</td>
+                    </tr>
+                    {% endfor %}
+                    <tfoot>
+                    <tr>
+                        <td colspan="5"></td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <!--<div>
+                <div class="col-md-4">
+                    <table class="table-condensed">
+                        <thead>
+                        <tr>
+                            <th colspan="2">Assigning a task</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <label for="typeTask-assign">Select task type:</label>
+                            </td>
+                            <td>
+                                <div class="select-task" id="typeTask-assign">
+                                    <select class="form-control">
+                                        <option>Production server</option>
+                                        <option>Qualification server</option>
+                                        <option>Provisional task</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="taskAssign">Task:</label>
+                            </td>
+                            <td>
+                                <div class="select-task">
+                                    <select class="form-control" id="taskAssign">
+                                        <option>Task</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="timeDate">Date and time:</label>
+                            </td>
+                            <td>
+                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="timeDate">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="selectHour">Hour:</label>
+                            </td>
+                            <td>
+                                <div class="choice-user">
+                                    <select class="form-control" id="selectHour">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="selectUser-assign">Select user:</label>
+                            </td>
+                            <td>
+                                <div class="choice-user">
+                                    <select class="form-control" id="selectUser-assign">
+                                        <option>User 1</option>
+                                        <option>User 2</option>
+                                        <option>User 3</option>
+                                        <option>User 4</option>
+                                        <option>User 5</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>-->
+        </div>
+        </div>
+    </main>
+{% endblock %}
+{% block footer %}
+    <footer>
+        <div class="wrapper clearfix">
+            <div class="footer-div row">
+                <div class="foot-notification col-md-6">Notification</div>
+                <div class="foot-other col-md-3">Other</div>
+                <div class="foot-news col-md-2">Newsletters</div>
+                <div class="foot-fr col-md-1">EN</div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}

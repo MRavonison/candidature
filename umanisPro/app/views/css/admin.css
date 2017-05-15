@@ -1,0 +1,163 @@
+/*============================================*/
+/***Structure CSS du CALENDAR, Umanis Group****/
+/*=========  Miharizo RAVONISON       ========*/
+/*=========  Julien THANGAVADIVEL     ========*/
+/*=============================================*/
+
+#admin-main h2{
+    background-color: #DCDCDC;
+    color: white;
+    padding: 10px;
+}
+
+.admin-container{
+    margin-top: -10px;
+}
+
+
+
+/* ==========================================================================
+    Nav admin
+   ========================================================================== */
+
+.nav-admin {
+
+    background-color:#F7D482 ;
+}
+
+.nav-admin li a{
+    color: white;
+}
+
+.nav-admin li a:hover{
+    background-color: white;
+    color: black;
+}
+
+/* ==========================================================================
+    Form Create User
+   ========================================================================== */
+
+.user-form{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.tab-content{
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 73px;
+}
+
+/* ==========================================================================
+    Form Create Task
+   ========================================================================== */
+
+#sign-in{
+    margin-top: 30px ;
+}
+
+.radio-select{
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+    Configuration Task
+   ========================================================================== */
+
+.tabSelect-user{
+    width: 70%;
+}
+
+.tabSelect-user tbody tr{
+    margin-top: 1px;
+}
+
+.tabSelect-user tbody tr td{
+    width: 90px;
+}
+
+#admin-main button{
+    background-color: #F7D482;
+    border-color: #F7D482;
+    color: white;
+    margin-top: 16px;
+}
+
+.modal-modif{
+    padding:15px;
+}
+.modal-header{
+    background-color:#F7D482 ;
+    color: white;
+}
+
+.modal-center{
+    margin-top: 20px;
+}
+
+#close-btn{
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.select-user{
+    border: 1px solid;
+    margin-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.table-task{
+    width: 56%;
+}
+
+.title-product{
+    background-color: #AFD7CF;
+    color:white;
+    font-weight: 800;
+}
+
+.title-qualif{
+    background-color: #EB8D8E;
+    color: white;
+    font-weight: 800;
+}
+
+.title-confirm{
+    background-color: #F7D482;
+    color: white;
+    font-weight: 800;
+}
+
+.admin-stat{
+border:1px solid;
+}
+
+.admin-stat{
+    margin-bottom: 20px;
+}
+
+.admin-stat div h3{
+    text-decoration : underline;
+    color:#F7D482;
+}
+
+.blue,.green,.red{
+    font-weight: 500;
+}
+
+.blue{
+    color :#AFD7CF;
+
+}
+
+.green{
+    color:#B1CE58;
+}
+
+.red{
+    color:#CB1C21;
+}
+

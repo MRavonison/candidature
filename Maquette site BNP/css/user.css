@@ -1,0 +1,37 @@
+.main-user ul li a{
+    color: white;
+}
+
+.main-user ul li a:hover{
+    background-color: white;
+    color:#008653;
+}
+
+.nav-info{
+    background-color: #008653;
+    color:white;
+    font-weight: 200;
+}
+
+.tableau{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    background-color: white;
+    width: 50%;
+}
+
+.tableau tbody tr td:nth-child(1){
+    background-color: #008653;
+    color:white;
+    font-weight: 200;
+}
+
+.tab-pane button{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+form{
+    margin-top:10px;
+}

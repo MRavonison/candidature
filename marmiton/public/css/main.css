@@ -1,0 +1,78 @@
+html, body, main{
+    height:100%;
+}
+
+.mon-navbar {
+    background-image: url('../img/fond_header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+}
+
+.mon-container {
+
+    background-image: url('../img/plat.jpg');
+    background-repeat: no-repeat ;
+    background-size: cover;
+    height: 100%;
+}
+
+.HomeView {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 550px;
+}
+
+div[class = "HomeView"] h1 {
+    margin-left: 100px;
+    padding-top: 20px;
+}
+
+div[class = "HomeView"] h3 {
+    margin-left: 100px;
+}
+
+/* style du bloc ul */
+.menu-vertical {
+    width: 250px; /* optionnel, c'est pour la démo */
+    list-style: none; /* supprime les puces de liste */
+    padding: 4px; /* on fait un peu de place autour des liens */
+    background: #F2F2F2;
+    margin-top: 100px;
+    margin-left: 20px;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: orange;
+}
+
+/* styles des liens et éléments de liste */
+.mv-item,
+.mv-item a {
+    /* les liens et item deviennent des blocs */
+    /* suffit théoriquement à virer les puces de liste */
+    display: block;
+    border-radius: 15px;
+}
+
+/* styles des liens */
+.mv-item a {
+    margin: 1px 0; /* espace les liens d'1 px */
+    padding: 8px 20px; /* marges internes pour aérer */
+    color: #666;
+    background: #FFF;
+    text-decoration: none; /* on vire le soulignement */
+
+    /* on définit la transition pour les navigateurs */
+    -webkit-transition: all .3s; /* Chrome/Safari */
+    -moz-transition: all .3s; /* Firefox (plus trop nécessaire) */
+    transition: all .3s; /* syntaxe officielle */
+}
+
+/* styles changeants au survol et focus */
+.mv-item a:hover,
+.mv-item a:focus {
+    background: darkorange;
+    color: #FFF;
+    padding-left: 30px; /* décalage du contenu de 10px vers la droite (30-20 = 10) */
+}

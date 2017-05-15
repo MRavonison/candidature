@@ -1,0 +1,62 @@
+{% extends 'pages/tablayout.twig' %}
+{% block content %}
+    <main id="userProfile-view">
+        <div class="wrapper clearfix">
+            <h2>User</h2>
+            <div class="user-container">
+                <div class="admin-stat col-md-5">
+                    <div>
+                        <h3> Statistique de user</h3>
+                    </div>
+                    <ul>
+                        <li>Taux de travail: <span class="blue">%</span></li>
+                        <li>Taux de travai en cours: <span>%</span></li>
+                        <li>Taux de travail a confirmer: <span class="red">%</span></li>
+                        <li>Taux de travaux finalise: <span class="green">%</span></li>
+                    </ul>
+                </div>
+                <div class="work-user .col-md-7">
+                    <table class="table-task table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th class="title-product">Production server</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>#</td>
+                            <td>Task 1</td>
+                        </tr>
+                        </tbody>
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th class="title-qualif">Qualification server</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>#</td>
+                            <td>Task 1</td>
+                        </tr>
+                        </tbody>
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th class="title-confirm">To Confirm</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>#</td>
+                            <td>Task 1</td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

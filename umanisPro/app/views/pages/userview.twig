@@ -1,0 +1,89 @@
+{% extends 'pages/tablayout.twig' %}
+{% block content %}
+    <main>
+        <div class="wrapper clearfix">
+            <h2>Monday</h2>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th></th>
+
+                    {% for user in userdispo %}
+                        <th>{{ user['compte'] }}</th>
+                    {% endfor %}
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="tab-ligne1">
+                    <td>8am</td>
+                    <td>
+                        <ul>
+                            <li>Id task</li>
+                            <li>Society name</li>
+                            <li>User name </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Id task</li>
+                            <li>Society name</li>
+                            <li>User name </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="tab-ligne2">
+                    <td>9am</td>
+                    <td>*</td>
+                    <td>*</td>
+                </tr>
+                <tr class="tab-ligne3">
+                    <td>10am</td>
+                    <td>*</td>
+                    <td>*</td>
+                </tr>
+                <tr class="tab-ligne4">
+                    <td>11am</td>
+                    <td>*</td>
+                    <td>*</td>
+                </tr>
+                <tr class="tab-ligne5">
+                    <td>12am</td>
+                    <td>*</td>
+                    <td>*</td>
+                </tr>
+                <tr class="tab-ligne6">
+                    <td>1pm</td>
+                    <td>*</td>
+                    <td>*</td>
+                </tr>
+                <tr class="tab-ligne7">
+                    <td>2pm</td>
+                    <td>*</td>
+                    <td>*</td>
+                </tr>
+                <tr class="tab-ligne8">
+                    <td>3pm</td>
+                    <td>*</td>
+                    <td>*</td>
+                </tr>
+                <tr class="tab-ligne9">
+                    <td>4pm</td>
+                    <td>*</td>
+                    <td>*</td>
+                </tr>
+                <tr class="tab-ligne10">
+                    <td>5pm</td>
+                    <td>*</td>
+                    <td>*</td>
+
+                </tr>
+                <tr class="tab-ligne11">
+                    <td>6pm</td>
+                    <td>*</td>
+                    <td>*</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+{% endblock %}

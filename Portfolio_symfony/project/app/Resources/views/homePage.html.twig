@@ -1,0 +1,265 @@
+
+{% extends 'layoutPage.html.twig' %}
+
+{% block body %}
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Miharizo RAVONISON</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about">A Propos</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Compétences</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading">Developpeur Web</h1>
+                <hr>
+                <p>Passionné de web, le developpement est un challenge de créativité, d'ingéniosité et de fonctionnalité ce sont des défis que j'adore relevés .</p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">En savoir plus</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Un commercial reconverti en développeur !</h2>
+                    <hr class="light">
+                    <p class="text-faded">
+                        Etant autodidacte, Openclassroom, Grafikart, Codefight et Alsacréation sont mes références dans le développement. J’ai également suivi des formations au sein de la 3W Academy et l’ETNA qui m'ont permis de de renforcer mes compétences.
+                    </p>
+                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Mes Compétences</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Mes Compétences</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+                        <h3>Coté Client</h3>
+                        <p class="text-muted">Utilisation des langages : HTML, CSS, JavaScript</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
+                        <h3>Coté Serveur</h3>
+                        <p class="text-muted">Utilisations des langages : PHP, SQL, C</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
+                        <h3>Les frameworks et CMS</h3>
+                        <p class="text-muted">Symfony, Silex, Slim, JQuery, Twitter Bootstrap, WordPress</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
+                        <h3>Mes plus</h3>
+                        <p class="text-muted">Shell, Linux, Mac, GitHub, Svn, Slack</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="{{ asset('bundles/Resources/public/img/portfolio/fullsize/1.jpg') }}" class="portfolio-box">
+                        <img src="{{ asset('bundles/Resources/public/img/portfolio/thumbnails/1.jpg') }}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    PHP, JQuery, Slim, Bootstrap
+                                </div>
+                                <div class="project-name">
+                                    Umanis
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="{{ asset('bundles/Resources/public/img/portfolio/fullsize/2.jpg') }}" class="portfolio-box">
+                        <img src="{{ asset('bundles/Resources/public/img/portfolio/thumbnails/2.jpg') }}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    PHP, Jquery
+                                </div>
+                                <div class="project-name">
+                                    Projet E-commerce
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="{{ asset('bundles/Resources/public/img/portfolio/fullsize/3.jpg') }}" class="portfolio-box">
+                        <img src="{{ asset('bundles/Resources/public/img/portfolio/thumbnails/3.jpg') }}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    PHP, Jquery, CSS, HTML
+                                </div>
+                                <div class="project-name">
+                                    Marmiton
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="{{ asset('bundles/Resources/public/img/portfolio/fullsize/6.jpg"') }}img/portfolio/fullsize/4.jpg" class="portfolio-box">
+                        <img src="{{ asset('bundles/Resources/public/img/portfolio/thumbnails/4.jpg') }}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    ...
+                                </div>
+                                <div class="project-name">
+                                    Prochainement
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="{{ asset('bundles/Resources/public/img/portfolio/fullsize/5.jpg"') }}" class="portfolio-box">
+                        <img src="{{ asset('bundles/Resources/public/img/portfolio/thumbnails/5.jpg') }}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    ...
+                                </div>
+                                <div class="project-name">
+                                    Prochainement
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="{{ asset('bundles/Resources/public/img/portfolio/fullsize/6.jpg"') }}" class="portfolio-box">
+                        <img src="{{ asset('bundles/Resources/public/img/portfolio/thumbnails/6.jpg') }}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    ...
+                                </div>
+                                <div class="project-name">
+                                    Prochainement
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Télécharger mon CV</h2>
+                <a href="{{ asset('bundles/Resources/public/img/cv/CV_RAVONISON.pdf') }}" class="btn btn-default btn-xl sr-button">Download Now!</a>
+            </div>
+        </div>
+    </aside>
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Un Message !</h2>
+                    <hr class="primary">
+                    <p>Laisser votre message, je vous recontacterez le plus rapidement possible</p>
+                </div>
+            </div>
+            <div class="row">
+                {{ form_start(form) }}
+
+                {{ form_widget(form) }}
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </section>
+    <section >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Sinon!</h2>
+                    <hr class="primary">
+                    <p>Vous pouvez également me contacter par mail ou téléphone</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x sr-contact"></i>
+                    <p>06-13-11-73-92</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                    <p><a href="mailto:your-email@your-domain.com">ravonison.miharizo@gmail.com</a></p>
+                    <p><a href="https://github.com/MRavonison/project">Mes projets sur GitHub</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="{{ asset('bundles/Resources/public/vendor/jquery/jquery.min.js') }}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ asset('bundles/Resources/public/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="{{ asset('bundles/Resources/public/vendor/scrollreveal/scrollreveal.min.js') }}"></script>
+    <script src="{{ asset('bundles/Resources/public/vendor/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{{ asset('bundles/Resources/public/js/creative.min.js') }}"></script>
+
+{% endblock body %}

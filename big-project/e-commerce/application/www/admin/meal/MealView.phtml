@@ -1,0 +1,50 @@
+<form class="generic-form" action="<?= $requestUrl?>/admin/meal" method="POST" enctype="multipart/form-data"> <!-- enctype permet d'encoder le formulaire donc change le format du formulaire elle est obligatiore lorsque il y a input type="file "-->
+    <h2><i class="fa fa-fire"></i> Ajout d'un aliment au catalogue</h2>
+
+    <fieldset>
+        <legend><i class="fa fa-check"></i> Caractéristique</legend>
+            <ul>
+                <li>
+                    <label for="name">Nom</label>
+                    <input type="text" name="name"/>
+                </li>
+                <li>
+                    <label for="description">description</label>
+                    <textarea name="description" id="description" cols="0" rows="2" maxlength="200"></textarea>
+                </li>
+                <li>
+                    <label for="picture">Photo</label>
+                    <input type="file" name="picture"/>
+                </li>
+                <li>
+                    <i class="fa fa-warning"></i> Merci de renommer le fichier de la photo avec le nom de l'aliment <strong>avant</strong> de l'envoyer
+                </li>
+            </ul>
+    </fieldset>
+    <fieldset>
+        <legend><i class="fa fa-retweet"></i> Approvisionnement</legend>
+            <ul>
+                <li>
+                    <label for="initialStock">Quantité</label>
+                    <input type="text" class="quantity" name="initialStock" maxlength="3"/>
+                </li>
+                <li>
+                    <label for="buyPrice">Prix d'achat</label>
+                    <input type="text" name="buyPrice" class="money" maxlength="5"/>
+                    <label class="no-width">€</label>
+                </li>
+                <li>
+                    <label for="saleprice">Prix de vente</label>
+                    <input type="text" name="salePrice" class="money" maxlength="5"/>
+                    <label class="no-width">€</label>
+                </li>
+            </ul>
+    </fieldset>
+    <ul>
+        <li>
+            <input class="button button-primary" type="submit" value="Ajouter">
+            <a class="button button-cancel small" href="<?= $requestUrl ?>">Annuler</a>
+        </li>
+    </ul>
+
+</form>

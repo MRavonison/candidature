@@ -1,0 +1,273 @@
+{% extends 'pages/tablayout.twig' %}
+{% block content %}
+
+    <main id="admin-main">
+        <div class="wrapper clearfix">
+            <h2> Administrator </h2>
+            <div class="admin-container">
+                <!-- Nav tabs -->
+                <ul class="nav-admin nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#userCreate" aria-controls="userCreate" role="tab" data-toggle="tab">User Create</a></li>
+                    <li role="presentation"><a href="#taskCreate" aria-controls="taskCreate" role="tab" data-toggle="tab">Task Create</a></li>
+                    <li role="presentation"><a href="#userConfig" aria-controls="userConfig" role="tab" data-toggle="tab">Task Configuration</a></li>
+                </ul>
+
+                    <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- Creation de User -->
+                    <div role="tabpanel" class="tab-pane active" id="userCreate">
+                        <div class="user-form">
+                            <form action="{{ path_for('createuser') }}" class="form-horizontal" method="post">
+                                <div class="option-id">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked>
+                                            Administrator
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="0">
+                                            User
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nameUser" class="col-sm-6 control-label">Name</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="nameUser" placeholder="Name" name="nameUser">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstNameUser" class="col-sm-6 control-label">FirstName</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="firstNameUser" placeholder="FirstName" name="firstNameUser">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="passwordUser" class="col-sm-6 control-label">Password</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="passwordUser" placeholder="Password" name="passwordUser">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="emailUser" class="col-sm-6 control-label">Email</label>
+                                    <div class="col-sm-6">
+                                        <input type="email" class="form-control" id="emailUser" placeholder="Email" name="emailUser">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button id="sign-in" type="submit" class="btn btn-default">Create</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Creation de Tâche -->
+                    <div role="tabpanel" class="tab-pane" id="taskCreate">
+                        <div class="user-form">
+                            <form action="{{ path_for('createtask') }}" method="post" class="form-horizontal">
+                                <div class="form-group">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nameTask" class="col-sm-6 control-label">Name Task</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="nameTask" placeholder="name Task" name="nameTask">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nameSociety" class="col-sm-6 control-label">Name Society</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="nameSociety" placeholder="Name Society" name="nameSociety">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deliveryDate" class="col-sm-6 control-label">Delivery Date</label>
+                                    <div class="col-sm-6">
+                                        <input type="date" class="form-control" id="deliveryDate" placeholder="Delivery Date" name="deliveryDate">
+                                    </div>
+                                </div>
+                                <div class="priorityServ">
+                                    <select class="form-control" name="priorityServ">
+                                        <option>Production server</option>
+                                        <option>Qualification server</option>
+                                        <option>To confirm</option>
+                                    </select>
+                                </div>
+                                <div class=" radio-select form-group">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="priorityRed" value="Red" checked>
+                                             Red priority
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="priorityOrange" value="Orange">
+                                             Orange priority
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="priorityYellow" value="Yellow">
+                                            Yellow priority
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="priorityGreen" value="Green">
+                                            Green priority
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button id="sign-in" type="submit" class="btn btn-default">Create</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Configuration des T�ches -->
+                    <div role="tabpanel" class="tab-pane" id="userConfig">
+
+                        <!-- Configuration du User -->
+                        <div class="select-user col-md-5">
+                            <div role="tabpanel" class="tab-pane active">
+                                <table class="tabSelect-user table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td>Select user :</td>
+                                            <td>
+                                                <div class="choice-user">
+                                                    <select class="form-control">
+                                                            {% for user in data %}
+                                                           <option>{{user['compte']}}</option>
+                                                            {% endfor %}
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Status :</td>
+                                            <td>{{ disponibility }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button id="btn-edit" type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal-modif">Edit</button>
+                            <div class="modal fade" id="myModal-modif" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="modif-rights-title">Name user</h4>
+                                        </div>
+                                        <div class="modal-center">
+                                            <form class="form-horizontal">
+                                                <div class="form-group">
+                                                    <label for="status" class="col-sm-2 control-label">Status</label>
+                                                    <div class="col-sm-8">
+                                                        <select id="status" class="form-control">
+                                                            <option>Holidays</option>
+                                                            <option>Sick leave</option>
+                                                            <option>Other absence</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-modif form-group">
+                                                    <label for="time-before" class="col-sm-1 control-label">Time:</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="date" class="form-control" id="time-before">
+                                                    </div>
+                                                    <label for="time-after" class="col-sm-1 control-label">To:</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="date" class="form-control" id="time-after">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" id="close-btn " class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                            <button id="save-btn-rights" type="button" class="btn btn-primary">Sauvegarder</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Affichage des T�ches -->
+                        <div class="work-user .col-md-7">
+                            <table class="table-task table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th class="title-product">Production server</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#</td>
+                                        <td>Task 1</td>
+                                    </tr>
+                                </tbody>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th class="title-qualif">Qualification server</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#</td>
+                                        <td>Task 1</td>
+                                    </tr>
+                                </tbody>
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th class="title-confirm">To Confirm</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>#</td>
+                                    <td>Task 1</td>
+                                </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <div class="admin-stat col-md-5">
+                            <div>
+                                <h3> Statistique de user</h3>
+                            </div>
+                            <ul>
+                                <li>Taux de travail: <span class="blue">%</span></li>
+                                <li>Taux de travai en cours: <span>%</span></li>
+                                <li>Taux de travail a confirmer: <span class="red">%</span></li>
+                                <li>Taux de travaux finalise: <span class="green">%</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}
+{% block footer %}
+    <footer>
+        <div class="wrapper clearfix">
+            <div class="footer-div row">
+                <div class="foot-notification col-md-6">Notification</div>
+                <div class="foot-other col-md-3">Other</div>
+                <div class="foot-news col-md-2">Newsletters</div>
+                <div class="foot-fr col-md-1">EN</div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}

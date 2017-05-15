@@ -1,0 +1,229 @@
+
+
+/* ==========================================================================
+   Base defaults
+   ========================================================================== */
+
+body{
+    background-color: #1E2728;
+    color:#D7D7D7;
+    font-size: 1.5rem;
+    max-height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+h2{
+    margin-top: 0;
+    margin-left: -10px;
+    padding: 10px;
+    background-color: #008653;
+    color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.modal-header{
+    background-color: #008653;
+}
+
+.modal-title{
+    color: white;
+    font-weight: 200;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+header{
+    background-color: white;
+    margin-bottom: 1px;
+}
+nav{
+    padding-left: 165px;
+}
+nav li{
+    display: inline-block;
+    margin-left: -9px;
+    padding:28px;
+}
+
+nav li a{
+    color: #54B48B;
+    font-weight: 200;
+}
+
+.logo-bnp{
+    width: 140px;
+    margin-top: -17px;
+}
+
+.nav-design{
+    background-color: #F8F8F9;
+}
+
+.nav-design a:hover{
+    color: #18603C;
+}
+
+.nav-design a{
+    text-decoration: none;
+}
+
+.nav-connect{
+    background-color: #008653;
+}
+
+.nav-connect:hover{
+    background-color: #18603C;
+}
+
+.nav-connect a{
+    color:white;
+    text-decoration: none;
+}
+
+.bg-danger{
+    color:black;
+}
+
+/* ==========================================================================
+   Main
+   ========================================================================== */
+#customer-info article{
+    margin: 15px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 16px;
+}
+
+.item img{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel-caption{
+    background-color: black;
+    opacity: 0.7;
+}
+
+#logo-partner ul{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#logo-partner ul li{
+    display: inline-block;
+    margin-right: 60px;
+}
+#logo-partner ul li a img:hover{
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer{
+    margin-top: 50px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-color: white;
+}
+
+.bloc-logo{
+    height: 180px;
+    border: 1px solid grey;
+}
+
+.bloc-logo div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.bloc-logo div:hover{
+color: #54B48B;
+}
+
+.bloc-logo div h4{
+    color: #008653;
+}
+
+#modal-body, #modal-body-legal{
+    color: grey;
+    text-align: center;
+}
+
+#modal-body ul li img{
+    width: 75%;
+    height: 63%;
+    margin-top:5px;
+}
+
+#modal-contact{
+    background-color: #008653;
+}
+#modal-contact h4, #modal-legal h4{
+    color: white;
+}
+
+.modal-footer button{
+    background-color: #008653;
+    text-shadow: 0 1px 0 #008653;
+    color: white;
+}
+
+.modal-footer button:hover{
+    background-color: grey;
+    text-shadow: 0 1px 0 grey;
+    color: white;
+}
+
+.logo-footer{
+    background-color: #008653;
+    border-radius: 79%;
+    height: 105px;
+    position: absolute;
+    left:108px;
+    width: 114px;
+    margin-top: 20px;
+}
+
+.logo-footer i{
+    font-size: 50px;
+    position: relative;
+    top: 30px;
+}
+
+.social-logo ul{
+    margin-left: -52px;
+    margin-top:40px;
+}
+
+.social-logo ul li{
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.social-logo ul li a i
+{
+    font-size: 60px;
+    color: #008653;
+}
+
+.social-logo ul li a i:hover{
+    opacity: 0.7;
+}

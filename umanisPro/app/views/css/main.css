@@ -1,0 +1,144 @@
+/**********************************************/
+/***Structure CSS du CALENDAR, Umanis Group****/
+/************Miharizo RAVONISON****************/
+/************Julien THANGAVADIVEL****************/
+/**********************************************/
+
+
+/* ==========================================================================
+   Base defaults
+   ========================================================================== */
+.wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+body{
+    font-family: "roboto",sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+nav ul, .header-connexion{
+    text-align: center;
+    position: relative;
+    top: 54px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-left: 50px;
+}
+
+header a{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header img{
+    margin-left: 10px;
+}
+
+header p{
+    font-size: 16px;
+}
+
+.header-connexion a{
+    color:white;
+    background-color: #EB8D8E;
+    padding:23%;
+}
+
+/* ==========================================================================
+   Main
+   ========================================================================== */
+main h2{
+    background-color: #DCDCDC;
+    padding: 10px;
+    color:white;
+}
+
+/* ==========================================================================
+   Tableau principal
+   ========================================================================== */
+.table thead tr th{
+    background-color: #DCDCDC;
+    border: 1px solid;
+    color: white;
+    text-align: center;
+}
+
+.table tbody tr td ul li{
+    list-style-type: none;
+}
+
+.table tbody tr td:nth-child(1){
+    width: 10%;
+    background-color: #DCDCDC;
+    color: white;
+    border: 1px solid;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Tableau des tâches
+   ========================================================================== */
+#tab-assign-head{
+    border-bottom: 3px solid white;
+}
+
+.tab-assign{
+        width: 104%;
+        text-align: center;
+        background-color:#DCDCDC;
+        color:white;
+}
+ .tab-assign th{
+        text-align: center;
+ }
+
+
+.tab-assign thead tr th{
+        padding: 8px;
+}
+
+.tab-assign-second th{
+        padding: 8px;
+}
+
+#assign-second th{
+        border: 1px solid white;
+}
+
+.tab-assign-body{
+        background-color: white;
+        color: black;
+}
+
+.tab-assign tfoot tr td{
+        padding: 8px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer{
+    background-color: #111111;
+    color:white;
+    padding: 16px;
+}
+
+.footer-div div{
+    border-right: 1px solid white;
+}

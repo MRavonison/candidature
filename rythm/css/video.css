@@ -1,0 +1,71 @@
+
+/* ==========================================================================
+   Base defaults
+   ========================================================================== */
+
+h1 {
+   font-size     : 35px;
+   text-transform: uppercase;
+   letter-spacing: 8px;
+}
+
+/* ==========================================================================
+   Main
+   ========================================================================== */
+
+video {
+   position       : fixed;
+   top            : 50%;
+   left           : 50%;
+   min-width      : 100%;
+   min-height     : 100%;
+   width          : auto;
+   height         : auto;
+   z-index        : -100;
+   transform      : translateX(-50%) translateY(-50%);
+   background     : url('../img/logo-rogue-one.jpg') no-repeat;
+   background-size: cover;
+   transition     : 1s opacity;
+}
+.stopfade {
+   opacity: .5;
+}
+
+#description {
+   background : rgba(0,0,0,0.3);
+   padding    : 2%;
+   width      : 33%;
+   margin     : 2%;
+   float      : right;
+}
+
+#description button {
+   display      : block;
+   width        : 80%;
+   padding      : 1%;
+   border       : none;
+   margin       : 10px auto;
+   font-size    : 18px;
+   background   : rgba(255,255,255,0.23);
+   color        : #fff;
+   border-radius: 3px;
+   cursor       : pointer;
+   transition   : .3s background;
+}
+
+#description button:hover {
+   background: rgba(0,0,0,0.5);
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media screen and (max-width: 500px) {
+   div{width:70%;}
+}
+
+@media screen and (max-device-width: 800px) {
+   html { background: url(../img/logo-rogue-one.jpg) #000 no-repeat center center fixed; }
+   #bgvid { display: none; }
+}

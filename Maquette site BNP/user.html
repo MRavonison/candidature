@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>C.E BNP Paribas Utilisateur</title>
+</head>
+<body>
+    <header>
+        <div class="wrapper clearfix">
+            <div class="row">
+                <div class="col-md-4 col-xs-6">
+                    <h1><img class="logo-bnp" src="img/logo/logo_bnp_ce.png" alt="logo bnp ce"></h1>
+                </div>
+                <div class="col-xs-6 col-md-8">
+                    <nav>
+                        <ul>
+                            <li>
+                                <form>
+                                    <input type="text" placeholder="Recherche" name="recherche">
+                                </form>
+                            </li>
+                            <li class="nav-design">
+                                <a href="index.html">Accueil</a>
+                            </li>
+                            <li class="nav-design">
+                                <a href="#">Mon compte</a>
+                            </li>
+                            <li class="nav-connect">
+                                <a href="index.html">Deconnexion</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-user">
+        <ul class="nav-info nav nav-tabs" id="myTabs" role="tablist">
+            <li role="presentation" id="main-bar" class="active"><a href="#info-customer" aria-controls="info-customer" role="tab" data-toggle="tab">Informations</a></li>
+            <li role="presentation" id="main-bar-two"><a href="#rights-customer" aria-controls="rights-customer" role="tab" data-toggle="tab">Vos droits</a></li>
+            <li role="presentation" id="main-bar-three"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Infos Bancaires & Justificatifs</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="info-customer">
+                <table class="tableau table-condensed">
+                    <tbody>
+                        <tr>
+                            <td>Nom:</td>
+                            <td class="lastName-tab">Landers</td>
+                        </tr>
+                        <tr>
+                            <td>Prénom:</td>
+                            <td class="firstName-tab">Marc</td>
+                        </tr>
+                        <tr>
+                            <td>Adresse:</td>
+                            <td id="address-tab">7-9 Jingumae 1-ChoumeT</td>
+                        </tr>
+                        <tr>
+                            <td>Ville:</td>
+                            <td id="city-tab">Shibuya-ku</td>
+                        </tr>
+                        <tr>
+                            <td>Code Postal</td>
+                            <td id="zipCode-tab">150-0001</td>
+                        </tr>
+                        <tr>
+                            <td>Téléphone:</td>
+                            <td id="phone-tab">01 01 03 34 09</td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td id="email-tab">marc.landers@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Droits</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Button trigger modal -->
+                <button type="button" id="modif-btn" class="btn btn-default" data-toggle="modal" data-target="#myModal-modif-info">Modifier</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal-modif-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="modif-info-title">Modication des informations</h4>
+                            </div>
+                            <div class="modif-info">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="lastName" class="col-sm-2 control-label">Nom</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="lastName" placeholder="Nom" maxlength="20">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="firstName" class="col-sm-2 control-label">Prénom</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="firstName" placeholder="Prénom" maxlength="20">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address" class="col-sm-2 control-label">Adresse</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="address" placeholder="Adresse" maxlength="50">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city" class="col-sm-2 control-label">Ville</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="city" placeholder="Ville" maxlength="20">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="zipCode" class="col-sm-2 control-label">Code Postale</label>
+                                        <div class="col-sm-3">
+                                            <input type="number" class="form-control" id="zipCode" placeholder="CP">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                                        <div class="col-sm-8">
+                                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone" class="col-sm-2 control-label">Téléphone</label>
+                                        <div class="col-sm-5">
+                                            <input type="tel" class="form-control" id="phone" placeholder="phone" maxlength="10">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                <button id="save-btn" type="button" class="btn btn-primary">Sauvegarder</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="rights-customer">
+                <table class="tableau table-condensed">
+                    <tbody>
+                        <tr>
+                            <td>Nom:</td>
+                            <td class="lastName-tab">Landers</td>
+                        </tr>
+                        <tr>
+                            <td>Prénom:</td>
+                            <td class="firstName-tab">Marc</td>
+                        </tr>
+                        <tr>
+                            <td>Date de naissance:</td>
+                            <td id="birthday-tab">17/08/1988</td>
+                        </tr>
+                        <tr>
+                            <td>Liaison familiale</td>
+                            <td id="family-tab">Marié</td>
+                        </tr>
+                        <tr>
+                            <td>Vos droits</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id="btn-rights" type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal-modif-rights">Modifier</button>
+
+                <div class="modal fade" id="myModal-modif-rights" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="modif-rights-title">Modication des informations</h4>
+                            </div>
+                            <div class="modif-rights-form">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="birthday" class="col-sm-2 control-label">Date de naissance</label>
+                                        <div class="col-sm-8">
+                                            <input type="date" class="form-control" id="birthday">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="family" class="col-sm-2 control-label">Liaison sociale</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="family" placeholder="Liaison sociale" maxlength="10">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                <button id="save-btn-rights" type="button" class="btn btn-primary">Sauvegarder</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="messages">
+                  <table class="tableau table-condensed">
+                      <tbody>
+                            <tr>
+                                <td>Acte de naissance:</td>
+                                <td>Toho</td>
+                            </tr>
+                            <tr>
+                                <td>Passeport / Carte d'identité:</td>
+                                <td>177733JNS90</td>
+                            </tr>
+                            <tr>
+                                <td>Factures:</td>
+                                <td>10</td>
+                            </tr>
+                      </tbody>
+                </table>
+                <button  type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal-modif-bankz">Modifier</button>
+
+               <div class="modal fade" id="myModal-modif-bankz" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="modif-bank-title">Modication des informations Bancaire & Piéce d'identité</h4>
+                            </div>
+                            <div class="modif-bank-form">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="acte" class="col-sm-2 control-label">Acte de naissance</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="acte" placeholder="Acte de naissance">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ci" class="col-sm-2 control-label">Numéro d'identité</label>
+                                        <div class="col-sm-8">
+                                            <input type="number" class="form-control" id="ci" placeholder="Numero identité">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                <button id="save-btn-bank" type="button" class="btn btn-primary">Sauvegarder</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper clearfix">
+            <div class="footer-info row">
+                <div class="bloc-logo col-xs-6 col-md-3">
+                    <!-- Button trigger modal -->
+                    <div id="bloc-logoOne">
+                        <h4>Contact</h4>
+                        <div class="logo-footer" data-toggle="modal" data-target="#myModal">
+                            <i class="fa fa-address-book" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div id="modal-contact" class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Contact</h4>
+                                </div>
+                                <div id="modal-body" class="modal-body">
+                                    <ul>
+                                        <li>16, bd des Italiens - 75009 Paris</li>
+                                        <li>01 20 30 40 50</li>
+                                        <li>cegroupebnp@bnpparibas.com</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bloc-logo col-xs-6 col-md-3">
+                    <div class="bloc-logoTwo">
+                        <h4>Réseaux Sociaux</h4>
+                        <div class="social-logo">
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bloc-logo col-xs-6 col-md-3">
+                    <div class="bloc-logoThree">
+                        <h4>A propos</h4>
+                        <div class="logo-footer">
+                            <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bloc-logo col-xs-6 col-md-3">
+                    <div class="bloc-logoFour">
+                        <h4>Mention légale</h4>
+                        <div>
+                            <div class="logo-footer" data-toggle="modal" data-target="#myModal-legal">
+                                <i class="fa fa-book" aria-hidden="true"></i>
+                            </div>
+
+                            <div class="modal fade" id="myModal-legal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div id="modal-legal" class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel-legal">Mention Légale</h4>
+                                    </div>
+                                    <div id="modal-body-legal" class="modal-body">
+                                        <p> Vous êtes actuellement connecté au site « https://monce.bnpparibas » qui est édité par CE BNP PARIBAS.</p>
+                                        <ul>
+                                            <li>Dénomination sociale : BNP PARIBAS</li>
+                                            <li>Représentant légal : Luke Skywalker</li>
+                                            <li>RCS : Tokyo 662 042 677</li>
+                                            <li> Identifiant CE TVA : EN 798862042449</li>
+                                            <li>Siège social : 16 boulevard des Italiens -75009 PARIS</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/animation.js"></script>
+    <script type="text/javascript" src="js/userControl.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

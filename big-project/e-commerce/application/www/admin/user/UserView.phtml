@@ -1,0 +1,37 @@
+<!--ADMIN-->
+
+<h2><i class="fa fa-user"></i> Création d'un administrateur</h2>
+
+<form class="generic-form" action="<?= $requestUrl?>/admin/user" method="POST">
+
+    <aside class="error-message">
+        <h3><i class="fa fa-warning"></i> Il y a <em class="total-error-count">1</em> erreur(s) dans le formulaire !</h3>
+        <p><?= $errorMessage ?></p>
+    </aside>
+
+    <fieldset>
+        <legend><i class="fa fa-lock"></i> Informations d'authentification</legend>
+
+
+        <ul>
+            <li>
+                <label for="e-mail">Email</label>
+                <input id="e-mail" name="email" type="text" value="<?=$email?>"/>
+            </li>
+            <li>
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" maxlength="10" />
+            </li>
+
+        </ul>
+
+
+    </fieldset>
+
+    <ul>
+        <li>
+            <input class="button button-primary" type="submit" value="Créer le compte">
+            <a class="button button-cancel small" href="<?= $requestUrl ?>">Annuler</a>
+        </li>
+    </ul>
+</form>

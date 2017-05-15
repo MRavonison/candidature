@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C.E BNP Paribas</title>
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper clearfix">
+            <div class="row">
+                <div class="col-md-4 col-xs-6">
+                    <h1><img class="logo-bnp" src="img/logo/logo_bnp_ce.png" alt="logo bnp ce"></h1>
+                </div>
+                <div class="col-xs-6 col-md-8">
+                    <nav>
+                        <ul>
+                            <li>
+                                <form>
+                                    <input type="text" placeholder="Recherche" name="recherche">
+                                </form>
+                            </li>
+                            <!-- Button trigger modal create count -->
+                            <li class="nav-design">
+                                <div id="notification"  data-toggle="modal" data-target="myModal-notification">
+                                    <a href="#">Notification</a>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal-notification" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel-notification">Notification</h4>
+                                            </div>
+                                            <div id="modal-body-notification" class="modal-body">
+                                                <p class="bg-danger">Merci de vous connecter</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Button trigger modal create count -->
+                            <li class="nav-design">
+                                <div id="create-count"  data-toggle="modal" data-target="myModal-count">
+                                    <a href="#">Créer un compte</a>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal-count" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel-count">Création de compte</h4>
+                                            </div>
+                                            <div id="modal-body-count" class="modal-body">
+                                                ...
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Button trigger modal connect -->
+                            <li class="nav-connect">
+                                <div id="customer-connect"  data-toggle="modal" data-target="myModal-connect">
+                                    <a href="#">Connexion</a>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal-connect" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel-connect">Création </h4>
+                                            </div>
+                                            <div id="modal-body-connect" class="modal-body">
+                                                <form id='form-connexion' class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-sm-offset-2 col-sm-10">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox"> Remember me
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-sm-offset-2 col-sm-10">
+                                                            <button id="sign-in" type="button" class="btn btn-default">Sign in</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <div id="error-connexion">
+
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper clearfix">
+            <section id="all-slider">
+                <h2>Les nouveautés du C.E </h2>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="img/ouzbekistan.jpg" alt="Voyage en ouzbekistan">
+                            <div class="carousel-caption">
+                                <h3>Un voyage en Ouzbekistan</h3>
+                                <p>Plusieurs places sont disponible</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/colonnie.jpg" alt="Colonnie de vacances">
+                            <div class="carousel-caption">
+                                <h3>Colonnie de vacances en Midi-Pyrénées</h3>
+                                <p>Pour les enfants des salariés BNP et les filiales</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/rogue_one.jpg" alt="Affiche film Rogue One">
+                            <div class="carousel-caption">
+                                <h3>Avant premiére de Star Wars: Rogue One</h3>
+                                <p>Projection le 14 Décembre, billeterie disponible</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="icon-prev" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="icon-next" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </section>
+            <section id="customer-info">
+                <h2>Les témoignages </h2>
+                <div class="row">
+                    <div class="col-xs-6 col-md-4">
+                        <article>
+                            <h3>Marie Thérese</h3>
+                            <figure>
+                                <img src="img/people_2.jpg" alt="colaborateur 1" class="img-circle">
+                                <figcaption>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Praesent eget nibh sit amet neque mollis congue a a eros. Aliquam erat volutpat.
+                                    Morbi laoreet sollicitudin diam, sed ullamcorper est.Praesent gravida, justo et luctus
+                                    condimentum, tellus massa blandit enim, in tincidunt est risus ut urna. Praesent ac leo
+                                    sem. Sed nec massa non dui interdum molestie. Pellentesque pellentesque dui et felis
+                                    posuere consequat. Phasellus ultricies vitae purus eu posuere.
+                                    Integer a mollis odio. Mauris non magna volutpat, lobortis velit et, tempor arcu.
+                                </figcaption>
+                            </figure>
+                            <p>
+                                <a href="#">Lire</a>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        <article>
+                            <h3>Joe Dalton</h3>
+                            <figure>
+                                <img src="img/people_1.jpg" alt="colaborateur 1" class="img-circle">
+                                <figcaption>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Praesent eget nibh sit amet neque mollis congue a a eros. Aliquam erat volutpat.
+                                    Morbi laoreet sollicitudin diam, sed ullamcorper est.Praesent gravida, justo et luctus
+                                    condimentum, tellus massa blandit enim, in tincidunt est risus ut urna. Praesent ac leo
+                                    sem. Sed nec massa non dui interdum molestie. Pellentesque pellentesque dui et felis
+                                    posuere consequat. Phasellus ultricies vitae purus eu posuere.
+                                    Integer a mollis odio. Mauris non magna volutpat, lobortis velit et, tempor arcu.
+                                </figcaption>
+                            </figure>
+                            <p>
+                                <a href="#">Lire</a>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        <article>
+                            <h3>Bob Léponge</h3>
+                            <figure>
+                                <img src="img/people_4.jpg" alt="colaborateur 1" class="img-circle">
+                                <figcaption>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Praesent eget nibh sit amet neque mollis congue a a eros. Aliquam erat volutpat.
+                                    Morbi laoreet sollicitudin diam, sed ullamcorper est.Praesent gravida, justo et luctus
+                                    condimentum, tellus massa blandit enim, in tincidunt est risus ut urna. Praesent ac leo
+                                    sem. Sed nec massa non dui interdum molestie. Pellentesque pellentesque dui et felis
+                                    posuere consequat. Phasellus ultricies vitae purus eu posuere.
+                                    Integer a mollis odio. Mauris non magna volutpat, lobortis velit et, tempor arcu.
+                                </figcaption>
+                            </figure>
+                            <p>
+                                <a href="#">Lire</a>
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section id="logo-partner">
+                <h2>Nos partenaires</h2>
+                <ul>
+                    <li>
+                        <a href="http://www.fnac.com/"><img src="img/logo/logo-fnac.png" alt="logo Fnac"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.cinemasgaumontpathe.com/cinemas/cinema-pathe-quai-d-ivry/"><img src="img/logo/logo_gaumont.png" alt="logo Gaumont Pathé"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.espaceclient.edenred.fr/commande/tk-panier"><img src="img/logo/logo_kadeos.jpg" alt="logo kadéos"></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <div class="wrapper clearfix">
+            <div class="footer-info row">
+                <div class="bloc-logo col-xs-6 col-md-3">
+                    <!-- Button trigger modal -->
+                    <div id="bloc-logoOne">
+                        <h4>Contact</h4>
+                        <div class="logo-footer" data-toggle="modal" data-target="#myModal">
+                            <i class="fa fa-address-book" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div id="modal-contact" class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Contact</h4>
+                                </div>
+                                <div id="modal-body" class="modal-body">
+                                    <ul>
+                                        <li>16, bd des Italiens - 75009 Paris</li>
+                                        <li>01 20 30 40 50</li>
+                                        <li>cegroupebnp@bnpparibas.com</li>
+                                        <li>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2896026035396!2d2.3354873151249875!3d48.871755507720444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e397c0372bf%3A0x14676cc123f085df!2s16+Boulevard+des+Italiens%2C+75009+Paris!5e0!3m2!1sfr!2sfr!4v1480070195030" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bloc-logo col-xs-6 col-md-3">
+                    <div class="bloc-logoTwo">
+                        <h4>Réseaux Sociaux</h4>
+                        <div class="social-logo">
+                            <ul>
+                                <li>
+                                    <a href="https://www.facebook.com/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/?lang=fr"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bloc-logo col-xs-6 col-md-3">
+                    <div class="bloc-logoThree">
+                        <h4>A propos</h4>
+                        <div class="logo-footer">
+                            <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bloc-logo col-xs-6 col-md-3">
+                    <div class="bloc-logoFour">
+                        <h4>Mention légale</h4>
+                        <div>
+                            <div class="logo-footer" data-toggle="modal" data-target="#myModal-legal">
+                                <i class="fa fa-book" aria-hidden="true"></i>
+                            </div>
+
+                            <div class="modal fade" id="myModal-legal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div id="modal-legal" class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel-legal">Mention Légale</h4>
+                                        </div>
+                                        <div id="modal-body-legal" class="modal-body">
+                                            <p> Vous êtes actuellement connecté au site « https://monce.bnpparibas » qui est édité par CE BNP PARIBAS.</p>
+                                            <ul>
+                                                <li>Dénomination sociale : BNP PARIBAS</li>
+                                                <li>Représentant légal : Luke Skywalker</li>
+                                                <li>RCS : Tokyo 662 042 677</li>
+                                                <li> Identifiant CE TVA : EN 798862042449</li>
+                                                <li>Siège social : 16 boulevard des Italiens -75009 PARIS</li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                        </div>
+                                    </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+    </footer>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/animation.js"></script>
+    <script type="text/javascript" src="js/userControl.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

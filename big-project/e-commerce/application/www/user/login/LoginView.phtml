@@ -1,0 +1,31 @@
+<form class="generic-form" action="<?= $requestUrl?>/user/login" method="POST" enctype="multipart/form-data">
+
+    <aside class="error-message hidden">
+        <h3><i class="fa fa-warning"></i> Il y a <em class="total-error-count">1</em> erreur(s) dans le formulaire !</h3>
+        <p><?= $errorMessage ?></p>
+    </aside>
+
+    <h2><i class="fa fa-lock"></i> Se connecter avec un compte utilisateur</h2>
+    <fieldset>
+        <legend>Informations d'authentification</legend>
+        <ul>
+            <!-- Champ pour l'email -->
+            <li>
+                <label for="e-mail">Email</label>
+                <input id="e-mail" name="e-mail" type="text" value="<?=$email?>" data-required data-name="Email"/>
+            </li>
+            <!-- Champ pour le mot de passe -->
+            <li>
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" data-required data-name="Mot de passe"/>
+            </li>
+
+        </ul>
+    </fieldset>
+    <ul>
+        <li>
+            <input class="button button-primary" type="submit" value="Connexion">
+            <a class="button button-cancel small" href="<?= $requestUrl ?>">Annuler</a>
+        </li>
+    </ul>
+</form>

@@ -1,0 +1,105 @@
+<!--USER-->
+<h2><i class="fa fa-user"></i> Création d'un compte client</h2>
+
+<form class="generic-form" action="<?= $requestUrl?>/user" method="POST">
+
+    <aside class="error-message hidden">
+        <h3><i class="fa fa-warning"></i> Il y a <em class="total-error-count"></em> erreur(s) dans le formulaire !</h3>
+        <p><?= $errorMessage ?></p>
+    </aside>
+
+    <fieldset>
+        <legend><i class="fa fa-book"></i> Identité et coordonnées</legend>
+
+
+        <ul>
+            <li>
+                <!--Nom  -->
+                <label for="firstname">Prénom</label>
+                <input id="firstname" name="firstname" title="name" type="text" maxlength="100" value="<?=$firstname?>"data-required data-name="Prénom"/>
+            </li>
+            <li>
+                <!--Prenom -->
+                <label for="lastname">Nom</label>
+                <input id="lastname" name="lastname" type="text" maxlength="100" value="<?=$lastname?>"data-required data-name="Nom"/>
+            </li>
+            <li>
+                <!-- Date de naissance-->
+                <label for="birthDate">Date de naissance</label>
+                <select id="birthDay" name="birthDay" >
+                    <?php for($day = 1; $day <= 31; $day++): ?>
+                        <option value="<?= $day ?>"><?= $day ?></option>
+                    <?php endfor ?>
+                </select>
+                <span>/</span>
+                <select name="birthMonth">
+                    <option value="1">Janvier</option>
+                    <option value="2">Février</option>
+                    <option value="3">Mars</option>
+                    <option value="4">Avril</option>
+                    <option value="5">Mai</option>
+                    <option value="6">Juin</option>
+                    <option value="7">Juillet</option>
+                    <option value="8">Août</option>
+                    <option value="9">Septembre</option>
+                    <option value="10">Octobre</option>
+                    <option value="11">Novembre</option>
+                    <option value="12">Décembre</option>
+                </select>
+                <span>/</span>
+                <select name="birthYear">
+                    <?php for($year = date('Y')-75 ; $year < date('Y'); $year++): ?>
+                        <option value="<?= $year ?>"><?= $year ?></option>
+                    <?php endfor ?>
+                </select>
+            </li>
+            <li>
+                <!-- Adresse / textarea-->
+                <label for="address">Adresse</label>
+                <textarea name="address" id="address" cols="0" rows="2" maxlength="200"><?=$address?></textarea>
+            </li>
+            <li>
+                <!-- Ville / -->
+                <label for="city">Ville</label>
+                <input id="city" name="city" type="text" maxlength="100" value="<?=$city?>"/>
+            </li>
+            <li>
+                <!-- Code Postal -->
+                <label for="zipCode">Code poste</label>
+                <input id="zipCode" name="zipCode" type="text" maxlength="5" class="zip-code" value="<?=$zipCode?>" data-name="Code postal"data-type="number"/>
+            </li>
+            <li>
+                <!-- telephone / -->
+                <label for="phone">Téléphone</label>
+                <input id="phone" name="phone" type="text" maxlength="10" class="phone" value="<?=$phone?>" data-name="Telephone" data-type="number"/>
+            </li>
+        </ul>
+
+
+    </fieldset>
+    <fieldset>
+        <legend><i class="fa fa-lock"></i> Informations d'authentification</legend>
+
+
+        <ul>
+            <li>
+                <label for="e-mail">Email</label>
+                <input id="e-mail" name="email" type="text" value="<?=$email?>" data-required data-name="Email"/>
+            </li>
+            <li>
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" data-required data-name="Mot de passe" data-length="8" />
+            </li>
+
+        </ul>
+
+
+    </fieldset>
+
+    <ul>
+        <li>
+            <input class="button button-primary" type="submit" value="Créer le compte" >
+            <a class="button button-cancel small" href="<?= $requestUrl ?>">Annuler</a>
+        </li>
+    </ul>
+</form>

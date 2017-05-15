@@ -1,0 +1,21 @@
+/**********************************************/
+/***Structure CSS du CALENDAR, Umanis Group****/
+/************Miharizo RAVONISON****************/
+/************Julien THANGAVADIVEL****************/
+/**********************************************/
+
+#connexion-form-div{
+    margin: 0 auto;
+    background-color: #EB8D8E;
+    width: 40%;
+    padding: 20px;
+    position: relative;
+    top:90px;
+    color:white;
+    border-radius:7px;
+}
+
+.first-form{
+    margin-top: 20px;
+}
+

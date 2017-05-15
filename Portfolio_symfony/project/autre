@@ -1,0 +1,17 @@
+# Assetic Configuration
+assetic:
+  debug: '%kernel.debug%'
+  user_controller: false
+  bundles: [ ]
+  filters:
+    less:
+      node: /usr/local/bin/node
+      node_paths: [/usr/local/lib/node_modules]
+      apply_to: "\.less$"
+    cssrewrite: ~
+
+
+    <link rel="stylesheet" href="{{ asset('bundles/Resources/public/vendor/bootstrap/css/bootstrap.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('bundles/Resources/public/vendor/font-awesome/css/font-awesome.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('bundles/Resources/public/vendor/magnific-popup/magnific-popup.css') }}">
+            <link rel="stylesheet" href="{{ asset('bundles/Resources/public/css/creative.min.css') }}">

@@ -1,0 +1,56 @@
+[19-Jan-2017 15:55:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getNomRecette() on array in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/PostControllers.php:25
+Stack trace:
+#0 /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/index.php(29): Controllers\PostControllers->homeView()
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/PostControllers.php on line 25
+[19-Jan-2017 16:03:29 Europe/Berlin] PHP Parse error:  syntax error, unexpected ';' in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/AppController.php on line 29
+[19-Jan-2017 16:04:32 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 7
+[19-Jan-2017 16:36:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Table/Recipe.php:20
+Stack trace:
+#0 /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/PostControllers.php(29): App\Table\Recipe::getNomRecette()
+#1 /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/index.php(29): Controllers\PostControllers->homeView()
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Table/Recipe.php on line 20
+[23-Jan-2017 12:05:32 Europe/Berlin] PHP Notice:  Undefined variable: posts in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 7
+[23-Jan-2017 12:05:32 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 7
+[23-Jan-2017 12:06:14 Europe/Berlin] PHP Notice:  Undefined variable: recipes in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 7
+[23-Jan-2017 12:06:14 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 7
+[23-Jan-2017 12:06:29 Europe/Berlin] PHP Notice:  Trying to get property of non-object in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 8
+[23-Jan-2017 12:07:10 Europe/Berlin] PHP Notice:  Array to string conversion in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 8
+[23-Jan-2017 12:14:26 Europe/Berlin] PHP Notice:  Trying to get property of non-object in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 8
+[23-Jan-2017 12:15:02 Europe/Berlin] PHP Notice:  Trying to get property of non-object in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 8
+[23-Jan-2017 12:15:59 Europe/Berlin] PHP Notice:  Undefined variable: recipes in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 7
+[23-Jan-2017 12:15:59 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 7
+[23-Jan-2017 12:16:26 Europe/Berlin] PHP Notice:  Trying to get property of non-object in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 8
+[23-Jan-2017 12:18:16 Europe/Berlin] PHP Notice:  Trying to get property of non-object in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 8
+[23-Jan-2017 12:18:19 Europe/Berlin] PHP Notice:  Trying to get property of non-object in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 8
+[23-Jan-2017 12:18:57 Europe/Berlin] PHP Notice:  Trying to get property of non-object in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 8
+[23-Jan-2017 12:19:57 Europe/Berlin] PHP Notice:  Trying to get property of non-object in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 8
+[23-Jan-2017 12:20:19 Europe/Berlin] PHP Notice:  Trying to get property of non-object in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 8
+[23-Jan-2017 12:20:37 Europe/Berlin] PHP Notice:  Trying to get property of non-object in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 8
+[23-Jan-2017 12:23:47 Europe/Berlin] PHP Notice:  Trying to get property of non-object in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 8
+[23-Jan-2017 12:26:11 Europe/Berlin] PHP Notice:  Undefined index: id in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/homeView.php on line 8
+[25-Jan-2017 14:41:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use [] for reading in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/PostControllers.php:34
+Stack trace:
+#0 /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/index.php(33): Controllers\PostControllers->create_recipeView()
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/PostControllers.php on line 34
+[30-Jan-2017 10:22:27 Europe/Berlin] PHP Notice:  Undefined variable: url in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/app/Views/create_recipeView.php on line 3
+[30-Jan-2017 14:24:41 Europe/Berlin] PHP Notice:  Undefined index: nom_rec in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/PostControllers.php on line 44
+[30-Jan-2017 18:19:03 Europe/Berlin] PHP Notice:  Undefined index: nom_rec in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/PostControllers.php on line 38
+[30-Jan-2017 18:19:03 Europe/Berlin] PHP Notice:  Undefined index: pseudo_rec in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/PostControllers.php on line 39
+[30-Jan-2017 18:19:03 Europe/Berlin] PHP Notice:  Undefined index: email_rec in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/PostControllers.php on line 40
+[30-Jan-2017 18:19:03 Europe/Berlin] PHP Notice:  Undefined index: descript_rec in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/PostControllers.php on line 41
+[30-Jan-2017 18:19:03 Europe/Berlin] PHP Notice:  Undefined index: image in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/PostControllers.php on line 42
+[31-Jan-2017 15:00:27 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Controllers\RecipeController::recipePost(), 0 passed in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/index.php on line 34 and exactly 1 expected in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/RecipeController.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/index.php(34): Controllers\RecipeController->recipePost()
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/RecipeController.php on line 16
+[31-Jan-2017 15:00:34 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Controllers\RecipeController::recipePost(), 0 passed in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/index.php on line 34 and exactly 1 expected in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/RecipeController.php:16
+Stack trace:
+#0 /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/public/index.php(34): Controllers\RecipeController->recipePost()
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/RecipeController.php on line 16
+[31-Jan-2017 16:33:04 Europe/Berlin] PHP Notice:  Undefined index: mon_img in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/RecipeController.php on line 21
+[31-Jan-2017 16:35:02 Europe/Berlin] PHP Notice:  Undefined index: mon_img in /Applications/MAMP/htdocs/htdocs/Etna/Marmiton/ravoni_m/test/app/Controllers/RecipeController.php on line 59
